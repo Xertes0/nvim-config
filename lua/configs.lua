@@ -4,6 +4,7 @@ function configs.config()
 	local map_opts = { noremap = true, silent = true }
 
 	-- Keymaps
+	---- LSP
 	vim.api.nvim_set_keymap('n', '<space>e', '<cmd>lua vim.diagnostic.open_float()<CR>', map_opts)
 	vim.api.nvim_set_keymap('n', '[d', '<cmd>lua vim.diagnostic.goto_prev()<CR>', map_opts)
 	vim.api.nvim_set_keymap('n', ']d', '<cmd>lua vim.diagnostic.goto_next()<CR>', map_opts)
@@ -22,6 +23,12 @@ function configs.config()
 	vim.api.nvim_set_keymap('n', '<space>a', '<cmd>CodeActionMenu<CR>', map_opts)
 	vim.api.nvim_set_keymap('n', 'gr', '<cmd>lua vim.lsp.buf.references()<CR>', map_opts)
 	vim.api.nvim_set_keymap('n', '<space>f', '<cmd>lua vim.lsp.buf.format { async=true }<CR>', map_opts)
+
+	---- Telescope
+	vim.api.nvim_set_keymap('n', '<leader>ff', '<cmd>lua require("telescope.builtin").find_files()<CR>', map_opts)
+	vim.api.nvim_set_keymap('n', '<leader>fg', '<cmd>lua require("telescope.builtin").live_grep()<CR>', map_opts)
+	vim.api.nvim_set_keymap('n', '<leader>fb', '<cmd>lua require("telescope.builtin").buffers()<CR>', map_opts)
+	vim.api.nvim_set_keymap('n', '<leader>fh', '<cmd>lua require("telescope.builtin").help_tags()<CR>', map_opts)
 
 	-- Hover window with rounded border
 	vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, {

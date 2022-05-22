@@ -70,6 +70,12 @@ return require('packer').startup(function()
 	-- Snippets
 	use 'L3MON4D3/LuaSnip'
 
+	-- Telescope
+	use {
+		'nvim-telescope/telescope.nvim',
+		requires = { {'nvim-lua/plenary.nvim'} }
+	}
+
 	-- Misc
 	---- NvimTree
 	use {
