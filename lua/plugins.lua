@@ -16,7 +16,7 @@ return require('packer').startup(function()
 	}
 
 	-- Context after brackets
-	use 'haringsrob/nvim_context_vt'
+	--use 'haringsrob/nvim_context_vt'
 
 	---- Rainbow brackets
 	use 'p00f/nvim-ts-rainbow'
