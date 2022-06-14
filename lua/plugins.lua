@@ -49,12 +49,6 @@ return require('packer').startup(function()
 		config = function() require('rust-tools').setup {} end
 	}
 
-	---- Prettier code actions
-	use {
-		'weilbith/nvim-code-action-menu',
-		cmd = 'CodeActionMenu',
-	}
-
 	-- Cmp
 	use {
 		'hrsh7th/nvim-cmp',
@@ -107,4 +101,7 @@ return require('packer').startup(function()
 			require('lualine').setup()
 		end
 	}
+
+	---- Pretty menus
+	use 'stevearc/dressing.nvim'
 end)

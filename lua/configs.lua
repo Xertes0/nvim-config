@@ -20,7 +20,7 @@ function configs.config()
 	vim.api.nvim_set_keymap('n', '<space>wl', '<cmd>lua print(vim.inspect(vim.lsp.buf.list_workspace_folders()))<CR>', map_opts)
 	vim.api.nvim_set_keymap('n', '<space>D', '<cmd>lua vim.lsp.buf.type_definition()<CR>', map_opts)
 	vim.api.nvim_set_keymap('n', '<space>rn', '<cmd>lua vim.lsp.buf.rename()<CR>', map_opts)
-	vim.api.nvim_set_keymap('n', '<space>a', '<cmd>CodeActionMenu<CR>', map_opts)
+	vim.api.nvim_set_keymap('n', '<space>a', '<cmd>lua vim.lsp.buf.code_action()<CR>', map_opts)
 	vim.api.nvim_set_keymap('n', 'gr', '<cmd>lua vim.lsp.buf.references()<CR>', map_opts)
 	vim.api.nvim_set_keymap('n', '<space>f', '<cmd>lua vim.lsp.buf.format { async=true }<CR>', map_opts)
 
