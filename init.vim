@@ -41,3 +41,6 @@ set shiftwidth=2
 
 set autoindent
 set smartindent
+
+" only on master branch
+set cmdheight=0
